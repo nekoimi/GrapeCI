@@ -1,0 +1,5 @@
+
+# 添加image信息
+image:
+  repository: REPLACE_REPOSITORY
+  tag: "REPLACE_TAG"

@@ -1,0 +1,20 @@
+# 全局配置
+# jenkins home 实际路径 (使用docker运行jenkins为jenkins home挂在宿主机的绝对路径)
+jenkinsHomeVolume: /mnt/data/jenkins_home
+# git凭据ID
+gitCredentials: gitlab
+# 构建产物S3存储地址
+artifactS3Host: Minio地址
+artifactS3Bucket: jenkins-artifact
+# Sonar Check 配置
+sonarHost: Sonarqube地址
+sonarToken: Sonarqube Token
+# 微信机器人通知配置ID
+wxWorkRobotId: xxx
+# 构建产物搜索列表，这个列表需要根据实际情况扩展
+# 支持处理的构建产物
+buildOutput:
+  - dist
+  - dist-staging
+  - target/app.jar
+  - target/app.war

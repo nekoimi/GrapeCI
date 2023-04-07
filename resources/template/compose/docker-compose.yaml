@@ -1,0 +1,20 @@
+version: "3.6"
+services:
+  REPLACE_NAME:
+    image: REPLACE_IMAGE
+    container_name: REPLACE_NAME
+    hostname: REPLACE_NAME
+    ports:
+      - "80:80"
+    networks:
+      - REPLACE_NAME_net
+    volumes:
+      - $PWD:/volume
+    privileged: true
+    restart: always
+    environment:
+      ENV_NAME: env_value
+
+networks:
+  REPLACE_NAME_net:
+    driver: bridge

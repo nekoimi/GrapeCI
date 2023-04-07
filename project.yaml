@@ -1,0 +1,32 @@
+# 项目名称，必填，唯一，简洁太长，由英文、数字、-、_组成，不能有其他字符
+# 后续作为docker image、helm chart的名称，yaml配置部署相关会用到
+name: java-project
+# 项目版本号，必填，遵循 Semver 规范 (https://semver.org) -> 主版本号.次版本号.修订号
+# 将作为docker image的Tag
+version: 0.0.1
+# 项目简介，必填，一句话说明，yaml配置部署相关会用到
+description: 项目简介
+# 项目分组，选填，harbor里面的项目名称，给docker image归类，相同分类的项目docker image会放在一起
+group: java-repos
+# 项目构建流程
+pipeline: web-spec
+# 多模块配置
+modules:
+    # Jenkins勾选参数名
+  - booleanParam: ""
+    # 模块名称
+    name: ""
+    # 模块相对 {build.context} 路径
+    path: ""
+    # 模块简介
+    description: ""
+# 项目构建配置
+build:
+  # 构建上下文路径，默认当前路径
+  context: .
+  # 用于build项目的docker镜像
+  image: node:18.0-alpine3.15
+  # 命令列表，使用 {buildImage} 来执行
+  commands:
+    - npm install --registry=https://registry.npmmirror.com
+    - npm run build

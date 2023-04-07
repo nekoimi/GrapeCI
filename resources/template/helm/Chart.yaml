@@ -1,0 +1,12 @@
+# Docs https://helm.sh/zh/docs/topics/charts/
+apiVersion: v2
+name: REPLACE_NAME
+version: 1.0.0
+appVersion: "REPLACE_VERSION"
+description: "REPLACE_DESCRIPTION"
+type: application
+keywords:
+  - REPLACE_NAME
+annotations:
+  name: REPLACE_NAME
+  version: REPLACE_VERSION

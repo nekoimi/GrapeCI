@@ -1,0 +1,21 @@
+# 生产环境配置
+stages:
+  - Build
+  - BuildImage
+  - BuildArtifactPackage
+  - BuildArtifactPush
+  - HelmChart
+  - DeployArtifactPackage
+  - DeployArtifactPush
+  - Notify
+docker:
+  registry: Harbor地址
+  credentials: Harbor凭据
+  repository: Harbor仓库
+  dockerComposeGit: ""
+kubernetes:
+  host: Kubernetes主节点IP地址
+  credentials: Kubernetes主节点SSH凭据
+  workspace: /deploy/helm-charts
+  deployNamespace: default
+  deployHelmGit: helm charts git存储仓库
