@@ -6,6 +6,7 @@ stages:
   - HelmChart
   - DeployToKubernetes
   - HelmTesting
+  - CleanImage
   - Notify
 docker:
   registry: Harbor地址

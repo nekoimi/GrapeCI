@@ -7,6 +7,7 @@ stages:
   - HelmChart
   - DeployArtifactPackage
   - DeployArtifactPush
+  - CleanImage
   - Notify
 docker:
   registry: Harbor地址

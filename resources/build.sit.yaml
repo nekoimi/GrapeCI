@@ -8,6 +8,7 @@ stages:
   - BuildArtifactPush
   - DeployArtifactPackage
   - DeployArtifactPush
+  - CleanImage
   - Notify
 docker:
   registry: Harbor地址
